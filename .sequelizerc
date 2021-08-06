@@ -1,0 +1,12 @@
+const path = require('path')
+
+if (typeof process.env.NODE_ENV === 'undefined') {
+  require('dotenv').config()
+  console.info(process.env.NODE_ENV)
+}
+
+module.exports = {
+  'config': path.resolve('db', 'config.js'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations')
+}
