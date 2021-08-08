@@ -16,9 +16,11 @@ Desenvolver um sistema de To-do List com banco relacional, onde o usuário tenha
 - Pode incluir 3 tarefas randômicas através da opção “**Estou sem tarefas**”
 
 **Validação do email**
+
 Deverá ser utilizada a API do MailboxLayer (https://mailboxlayer.com/documentation - API KEY será definida na variável de ambiente MAILBOXLAYER_KEY). Será considerado um e-mail correto aquele que tem formato válido e que tenha os registros MX de acordo também. Se o e-mail for inválido deverá sugerir ao usuário o endereço indicado pela API (atributo did_you_mean).
 
 **Opção "Estou sem tarefas"**
+
 Incluir 3 tarefas automaticamente ao usuário de nome “Eu”, email “[eu@me.com](mailto:eu@me.com)”. As descrição das tarefas devem conter fatos randômicos sobre Cachorros, consultados na API (https://alexwohlbruck.github.io/cat-facts/).
 
 ## Instalação
