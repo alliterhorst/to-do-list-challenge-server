@@ -79,3 +79,7 @@ $ npm run start:prod
 ## Swagger (documentação dos endpoints)
 
 Este micro serviço foi implementado utilizando a estratégia de auto-documentação do próprio código. Para acessar a documentação precisamos executar o projeto e em seguida acessar a url http://localhost:3000/swagger/.
+
+## Frontend em React Native com Expo e geração de PWA
+
+Acesse o projeto [**To-Do List Frontend**](https://github.com/allistertr/to-do-list-challenge-frontend).
