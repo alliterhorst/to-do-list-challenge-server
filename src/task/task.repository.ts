@@ -12,8 +12,10 @@ export class TaskRepository {
       include: [
         {
           model: TaskHistoryModel,
+          order: [['updatedAt', 'DESC']],
         },
       ],
+      order: [['updatedAt', 'DESC']],
     });
     return tasks.map((task) => new TaskResponseDto(task));
   }
@@ -34,6 +36,7 @@ export class TaskRepository {
       include: [
         {
           model: TaskHistoryModel,
+          order: [['updatedAt', 'DESC']],
         },
       ],
     });

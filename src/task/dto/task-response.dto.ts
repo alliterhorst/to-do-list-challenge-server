@@ -78,8 +78,9 @@ export class TaskResponseDto {
     description: 'Historico de alteração da task',
     type: TaskHistoryResponseDto,
     isArray: true,
+    required: false,
   })
-  taskHistory: TaskHistoryResponseDto[];
+  taskHistory?: TaskHistoryResponseDto[];
 
   constructor(taskModel: TaskModel) {
     this.id = taskModel.id;

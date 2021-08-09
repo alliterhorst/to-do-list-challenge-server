@@ -21,7 +21,7 @@ async function bootstrap(): Promise<void> {
 
   const options = new DocumentBuilder()
     .setTitle('ms-to-do-list-challenge')
-    .setDescription('Microsserviço de exemplo')
+    .setDescription('Microsserviço da aplicação To-Do List')
     .setVersion('1.0.0')
     .addBearerAuth()
     .build();
