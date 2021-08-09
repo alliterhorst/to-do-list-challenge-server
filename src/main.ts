@@ -24,7 +24,6 @@ async function bootstrap(): Promise<void> {
     .setDescription('Microsserviço de exemplo')
     .setVersion('1.0.0')
     .addBearerAuth()
-    .addTag('to-do-list-challenge')
     .build();
   const document = SwaggerModule.createDocument(app, options, {
     include: [AppModule],
