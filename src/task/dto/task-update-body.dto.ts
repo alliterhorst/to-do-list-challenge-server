@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsString, MinLength } from 'class-validator';
+import { IsEnum, IsOptional, IsString, MinLength } from 'class-validator';
 import { TaskStatusEnum } from 'src/common/task-status.enum';
 
 export class TaskUpdateBodyDto {
@@ -11,11 +11,13 @@ export class TaskUpdateBodyDto {
   })
   status: TaskStatusEnum;
 
+  @IsOptional()
   @IsString()
   @MinLength(1)
   @ApiProperty({
     description: 'Senha do supervisor',
     example: 'TESTE',
+    required: false,
   })
-  supervisorPassword: string;
+  supervisorPassword?: string;
 }

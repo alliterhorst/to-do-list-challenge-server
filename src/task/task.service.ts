@@ -60,10 +60,13 @@ export class TaskService {
     status,
   }: {
     taskId: string;
-    supervisorPassword: string;
+    supervisorPassword?: string;
     status: TaskStatusEnum;
   }): Promise<TaskResponseDto> {
-    if (supervisorPassword !== process.env.SUPERVISOR_PASSWORD)
+    if (
+      status === TaskStatusEnum.PENDING &&
+      supervisorPassword !== process.env.SUPERVISOR_PASSWORD
+    )
       throw new UnauthorizedException('Senha do supervisor incorreta.');
     const task = await this.taskRepository.getTaskById(taskId);
     if (!task) throw new NotFoundException('Tarefa não localizada');
